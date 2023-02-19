@@ -8,9 +8,7 @@ const {todoRouter} = require("./router/Todo.route");
 const { authenticate } = require("./middleware/authenticate.middleware");
 const cors = require("cors");
 
-app.use(cors({
-    origin : "*"
-}))
+app.use(cors())
 
 app.use(express.json());
 
