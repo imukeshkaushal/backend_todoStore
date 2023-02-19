@@ -6,6 +6,11 @@ require('dotenv').config()
 const { userRouter } = require("./router/User.route");
 const {todoRouter} = require("./router/Todo.route");
 const { authenticate } = require("./middleware/authenticate.middleware");
+const cors = require("cors");
+
+app.use(cors({
+    origin : "*"
+}))
 
 app.use(express.json());
 
